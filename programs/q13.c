@@ -1,4 +1,4 @@
-/* Program to reverse a number using do-while loop ( palindrome of a given number)*/
+/* Program to reverse a number using do-while loop */
 #include <stdio.h>
 int main() {
     int rev=0,digit,n,temp;
