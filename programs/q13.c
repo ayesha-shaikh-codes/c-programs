@@ -1,0 +1,24 @@
+/* Program to reverse a number using do-while loop */
+#include <stdio.h>
+int main() {
+    int rev=0,digit,n,temp;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    temp = n;
+    do
+    {
+     digit = n%10;
+     rev = rev*10 + digit;
+     n/=10;
+    }
+    while (n!=0);
+    printf("Original Number : %d\n", temp);
+    printf("Reversed Number : %d\n", rev);
+          
+     return 0;
+}
+/*
+Enter a number: 12345
+Original Number : 12345
+Reversed Number : 54321
+*/
