@@ -17,3 +17,7 @@ int main()
     printf("Outside function: a = %d, b = %d\n", a, b);
     return 0;
 }
+/*
+Inside function: x = 20, y = 10
+Outside function: a = 10, b = 20
+*/
