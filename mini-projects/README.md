@@ -1,4 +1,4 @@
-1. BMI Calculator (c)
+# 1. BMI Calculator (c)
 
 Console-based BMI (Body Mass Index) Calculator written in C that helps users calculate and understand their BMI based on height and weight input.
 
@@ -35,7 +35,7 @@ gcc bmi.c -o bmi
 ./bmi
 
 
-2. Student Management System (C)
+# 2. Student Management System (C)
 
 A menu-driven Student Management System written in C that allows users to manage student records efficiently.
 
