@@ -29,9 +29,9 @@ Console-based BMI (Body Mass Index) Calculator written in C that helps users cal
    
 ## How to Run
 
-1- Compile the program:
+1. Compile the program:
 gcc bmi.c -o bmi
-2- Run the program:
+2. Run the program:
 ./bmi
 
 ## Author
