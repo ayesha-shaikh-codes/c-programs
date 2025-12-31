@@ -3,7 +3,7 @@
 This repository contains C programs written during my B.Tech CSE (1st semester).
 
 ## Programs Included
-- BMI Calculator
+- Practice programs to make C language base strong
 
 ## Language
 - C
