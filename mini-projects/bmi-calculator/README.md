@@ -4,34 +4,34 @@ Console-based BMI (Body Mass Index) Calculator written in C that helps users cal
 
 ## Features
 
- • Calculates BMI using height and weight
- • Displays BMI value
- • Categorizes BMI into:
- • Underweight
- • Normal weight
- • Overweight
- • Obese
- • Provides a brief explanation for each category
- • Validates user input (accepts only positive values)
+ - Calculates BMI using height and weight
+ - Displays BMI value
+ - Categorizes BMI into:
+ - Underweight
+ - Normal weight
+ - Overweight
+ - Obese
+ - Provides a brief explanation for each category
+ - Validates user input (accepts only positive values)
 
 ## Concepts Used
 
- •C Programming Language
- • Functions
- • Conditional Statements
- • Input Validation
- • Modular Programming
+ - C Programming Language
+ - Functions
+ - Conditional Statements
+ - Input Validation
+ - Modular Programming
 
 ## Technologies Used
 
- • C Programming Language
- • GCC Compiler
-
+ - C Programming Language
+ - GCC Compiler
+   
 ## How to Run
 
-1. Compile the program:
+1- Compile the program:
 gcc bmi.c -o bmi
-2. Run the program:
+2- Run the program:
 ./bmi
 
 ## Author
