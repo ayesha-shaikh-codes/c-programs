@@ -12,6 +12,33 @@ struct Student {
     float percentage;
 };
 
+//login system
+int login()
+{
+    char user[20] ,pass[20];
+    printf("Username: ");
+    scanf("%s", user);
+    printf("Password: ");
+    scanf("%s", pass);
+    if(strcmp(user, "admin")==0 && strcmp(pass, "admin@123")==0)
+    return 1;
+    else
+    return 0;
+}
+
+void loadstudents(struct Student s[], int *count)
+{
+    FILE *fp = fopen("student.dat","rb");
+    if (fp == NULL)
+    return;
+    while(fread(&s[*count],sizeof(struct Student),1 ,fp))
+    {
+        (*count)++;
+    }
+    fclose(fp);
+}
+
+
 void addStudents(struct Student s[], int *count)
 { 
      int n;
@@ -76,7 +103,7 @@ void searchStudents(struct Student s[], int count)
     {
         if (s[i].roll == searchroll)
       {
-        printf("\n=====Student foumd=====\n");
+        printf("\n=====Student found=====\n");
         printf("Name    : %s\n", s[i].name);
         printf("Roll No : %d\n", s[i].roll);
         printf("Marks   : %.2f\n", s[i].marks);
@@ -101,7 +128,7 @@ if(count ==0)
     printf("No Student available to update\n");
     return;
 }
-   printf("Enter roll no to update markas: \n");
+   printf("Enter roll no to update marks: \n");
    scanf("%d",&roll);
    
    for (int i = 0;i < count;i++)
@@ -113,7 +140,7 @@ if(count ==0)
            scanf("%f",&newmarks);
            s[i].marks = newmarks;
            s[i].percentage= (newmarks /TOTAL_MARKS)*100;
-           printf("Marks updated succsfully!\n");
+           printf("Marks updated successfully!\n");
            found = 1;
          
        }
@@ -122,7 +149,7 @@ if(count ==0)
    }
    if (!found)
    {
-   printf("Student with roll no %d  ot found\n",roll);
+   printf("Student with roll no %d  not found\n",roll);
     }
 }
 
@@ -160,12 +187,31 @@ void deleteStudents(struct Student s[], int *count)
     }
 }
 
+void savestudents(struct Student s[], int count)
+{
+    FILE *fp = fopen("student.dat","wb");
+    if (fp == NULL)
+    return;
+    
+    fwrite(s, sizeof(struct Student), count,fp);
+    fclose(fp);
+}
+
 int main() {
     int i;
     int total_marks = 100;
     struct Student s[MAX];
     int count = 0; 
     int choice;
+    
+    if(!login())
+    {
+        printf("Access Denied. Invalid credentials. \n");
+        return 0;
+    }
+    
+    loadstudents(s,&count);
+    
     do
     {
         printf("\n===== STUDENT MANAGEMENT SYSTEM=====\n");
@@ -210,5 +256,6 @@ case 6:
     
 }   while (choice != 6); 
 
+savestudents(s,count);
     return 0;
 }
