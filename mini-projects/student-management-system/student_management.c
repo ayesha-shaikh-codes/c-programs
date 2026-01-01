@@ -21,6 +21,7 @@ int login()
     printf("Password: ");
     scanf("%s", pass);
     if(strcmp(user, "admin")==0 && strcmp(pass, "admin@123")==0)
+       // username: admin , password: admin@123 to get access
     return 1;
     else
     return 0;
