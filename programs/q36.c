@@ -1,4 +1,4 @@
-/* C program to find lenght of a string */
+/* C program to find lenght of a string using pointers */
 #include <stdio.h>
 
 int main() 
