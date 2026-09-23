@@ -1,4 +1,4 @@
-/* To find the maximum of two numbers using nested if-else*/
+/* To find the maximum of three numbers using nested if-else*/
 #include <stdio.h>
 int main() {
     int a, b, c;
