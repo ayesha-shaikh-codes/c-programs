@@ -1,4 +1,4 @@
-/* To find if a number is positive or negetive using if-else*/
+/* To find if a number is even or odd using if-else*/
 #include <stdio.h>
 int main() {
     int num;
