@@ -28,21 +28,22 @@
     //using dot operator
     printf("Name of s1: %s\n",s1.name);
     printf("Roll number of s1: %d\n",s1.roll);
-    printf("Marks of s1: %2f\n",s1.marks);
-    printf("Address of s1: %s %d\n",s1.a.city, &s1.a.pin);
+    printf("Marks of s1: %.2f\n",s1.marks);
+    printf("Address of s1: %s, %d\n",s1.a.city, s1.a.pin);
     return 0;
  }
 /*
 Input:-
 Enter student name: Ayesha
-Enter student roll no: 10
-Enter students marks: 88
+Enter student roll no: 1
+Enter students marks: 99
 Enter student address city name: Pune
 Enter student address pin code: 411015
 
 Output:-
 Name of s1: Ayesha
-Roll number of s1: 10
-Marks of s1: 88.000000
-Address of s1: Pune -913618048
+Roll number of s1: 1
+Marks of s1: 99.00
+Address of s1: Pune, 411015
+
 */  
